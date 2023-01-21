@@ -19,7 +19,7 @@ app.post("/calculate",async (req,res)=>{
     let interse_gained = Total_Maturity - Total_investment;
     console.log(interse_gained)
 
-    return res.send({"Total_Maturity": Total_Maturity, "Total_investment": Total_investment, "interse_gained": interse_gained})
+    return res.send({"Total_Maturity": Total_Maturity.toFixed(2), "Total_investment": Total_investment.toFixed(2), "interse_gained": interse_gained.toFixed(2)})
 })
 
 module.exports = app
