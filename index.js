@@ -9,6 +9,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req,res)=>{
+    return res.send("hello")
+})
 app.listen(8083, async()=>{
     await connect();
     console.log(`listening to 8083`);
